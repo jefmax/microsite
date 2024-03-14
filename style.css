@@ -1,0 +1,336 @@
+/* basic settings */
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box; 
+  }
+
+  html,body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7em;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  /* worked on the header */
+  .container{
+    padding: 0 8.4rem;
+    background: #1f252e;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .navbar{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    overflow: auto;
+    padding: 20px 0;
+  }
+
+  .navbar .logo a{
+    color: #fff;
+  }
+
+  .navbar ul {
+    list-style: none;
+    display: flex;
+  }
+  
+
+  .navbar ul li a {
+    margin-left: 1rem;
+    color: #fff;
+  }
+  .navbar ul li a:hover {
+    color: rgba(230, 35, 0);
+  }
+
+/* I created an animated banner */
+  .banner{
+    background-image: url(img/vegetariana.jpg);
+    background-color: rgb(50, 50, 50);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    height: 60vh;
+
+    animation: slideBg 10s linear infinite 0s;
+    animation-timing-function: ease-in-out;
+
+  }
+
+  @keyframes slideBg {
+    0% {
+      background-image: url(img/vegetariana.jpg);
+    }
+    33.3% {
+      background-image: url(img/pabellon.jpg);
+    }
+    66.6% {
+      background-image: url(img/pelua.jpg);
+    }
+    100% {
+      background-image: url(img/vegetariana.jpg);
+    }
+  }
+
+  .greeting{ 
+    top: 40%;
+    width: 100%;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .greeting h1{
+    font-size: 2.5rem;
+    color: rgb(255, 255, 255, 0.7);
+    margin-bottom: .8rem;
+
+    animation: Slide_Up 1.4s ease;
+  }
+  @keyframes Slide_Up {
+    0% {
+      transform: translateY(200px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+ .greeting h2{
+  font-size: 1.8rem;
+  color: rgb(255, 255, 255, 0.6);
+
+  animation: Slide_Up 2.5s ease;
+ }
+ @keyframes Slide_Up {
+  0% {
+    transform: translateY(200px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* we give more information about the web */
+.about {
+  display: block;
+  padding: 2rem 8.4rem;
+}
+
+.about_content {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  justify-content: center;
+}
+
+/* part of the business and the product is shown */
+.wrap{
+  text-align: center;
+  padding: 2rem 8rem;
+}
+
+.wrap h3{
+  font-size: 1.8rem;
+  padding-bottom: 2rem;
+  color: #1f252e;
+}
+
+.gallery .image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.gallery .image img {
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.gallery .image img:hover {
+  transform: rotate(10deg) scale(1.45);
+  filter: brightness(60%);
+}
+
+.gallery {
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.menu{
+  width: 100%;
+  margin: auto;
+  margin-bottom: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  column-gap: 1rem;
+  row-gap: 1rem;
+}
+
+.menu .image img:hover{
+  scale: 1;
+  opacity: 1;
+  transform: rotate(5deg) scale(1.50);
+  filter: brightness(90%);
+}
+/* create a universal button */
+.btn{
+  font-size: 1rem;
+  background-color: rgba(230, 35, 0);
+  color: #fff;
+  border-radius: 2px;
+  width: 250px;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  transition: all 0.3s;
+}
+.btn:hover{
+  color: rgba(230, 35, 0);
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid rgba(230, 35, 0);
+}
+
+/* contac */
+.contact{
+  background: #1f252e;
+  height: 40vh;
+}
+
+.container2 {
+  font-size: 1.4rem;
+  padding: 5% 10%;
+  text-align: left;
+}
+
+.container2 h2, .container2 p {
+  
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* simple footer */
+.footer{
+  background: #fff;
+  padding: 1rem 0;
+}
+.footer_content{
+  text-align: center;
+  font-size: 16px;
+}
+.social{
+  text-align: center;
+}
+.social a{
+  color: #1f252e;
+  padding: 1rem;
+}
+.real{
+  background: transparent;
+}
+.real .navbar ul li a, .real .navbar .logo a{
+  color: #1f252e;
+  
+}
+.real .navbar ul li a{
+  font-weight: 500;
+}
+.real .navbar ul li a:hover{
+  color: rgba(230, 35, 0);
+}
+
+.contact_real{
+  padding: 2rem;
+  text-align: center;
+    color: #fff;
+    background: #1f252e;
+    height: 80vh;
+  }
+
+  .form, .user{
+    padding: 2rem;
+  }
+
+/* media querys */
+@media screen and (max-width: 950px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);/* Two columns on medium screens */
+  }
+  .contact{
+    height: 240px;
+  }
+  .container2 {
+    font-size: .8rem;
+    padding: 2%;
+  }
+  .menu{
+    grid-template-columns: repeat(3, 1fr);/* three columns on medium screens*/
+  }
+  .wrap{
+    padding: 2rem;
+  }
+  .contact_real{
+    padding: 2rem;
+    text-align: center;
+      color: #fff;
+      background: #1f252e;
+      height: auto;
+    }
+}
+
+  
+  @media screen and (max-width: 600px){
+    .container{
+        padding: 0 1rem;
+    }
+    .navbar{
+        flex-direction: column;
+        padding-bottom:1rem ;
+        text-align: center;
+    }
+    
+    .navbar ul {
+        justify-content: center;
+    }
+    
+    .navbar ul li{
+      padding: .2rem 0;
+  }
+    .about{
+      padding: 2rem;
+    }
+    .gallery {
+      grid-template-columns: repeat(1, 1fr);/* A column on small screens */
+    }
+    .wrap{
+      padding: 2rem;
+    }
+    .wrap h3{
+      font-size: 1.6rem;
+    }
+
+    .contact{
+      height: 350px;
+    }
+    .container2 {
+      font-size: 1rem;
+      padding: 15% 10%;
+      text-align: center;
+    }
+  }
+  
